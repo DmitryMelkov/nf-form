@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nf-form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="form">
+    <div class="container form__container">
+      <div class="form__content">
+        <div class="form__left">
+          <h2 class="form__title title-reset">Заполните форму!</h2>
+          <p class="form__descr descr-reset">Регистрация на нашем сайте занимает несколько минут, просим ответить на
+            все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство
+            процессов автоматизированы, что сэкономит ваше время и деньги!</p>
+        </div>
+        <form class="form__right" action="/" id="form">
+          <ul class="form__list">
+            <li class="form__item">
+              <input type="text" class="form__input name req" id="surname" placeholder="Фамилия" name="surname">
+              <label for="surname" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+            <li class="form__item">
+              <input type="text" class="form__input name req" id="name" placeholder="Имя" name="name">
+              <label for="name" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+            <li class="form__item">
+              <input type="text" class="form__input name req" id="patronymic" placeholder="Отчество" name="patronymic">
+              <label for="patronymic" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+            <li class="form__item">
+              <input type="date" class="form__input date req" id="date" placeholder="Дата рождения" name="date">
+              <label for="date" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+
+            <li class="form__item">
+              <input type="text" class="form__input city req" id="city" placeholder="Город" name="city">
+              <label for="city" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+            <li class="form__item">
+              <input type="email" class="form__input email req" id="email" placeholder="E-mai" name="email">
+              <label for="email" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Некорректный ввод
+              </label>
+            </li>
+            <li class="form__item">
+              <input type="tel" class="form__input phone req" id="number-phone"
+                placeholder="Номер телефона: +7 (XXX) - XXX XX XX" name="number-phone">
+              <label for="number-phone" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Некорректный ввод
+              </label>
+            </li>
+            <li class="form__item">
+              <textarea class="form__input textarea descr req" name="descr" id="descr"
+                placeholder="Какое-то описание"></textarea>
+
+              <label for="descr" class="form__label">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="8" r="6.5" stroke="purple" />
+                  <path d="M8 6V11.5" stroke="purple" />
+                  <path d="M8 3.5V4.5" stroke="purple" />
+                </svg>
+                Заполните поле
+              </label>
+            </li>
+          </ul>
+          <div class="form__btns">
+            <button class="form__btn btn-reset" type="submit">Далее</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
