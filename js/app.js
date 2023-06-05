@@ -1,5 +1,9 @@
-//validation
+//inputmask
+const inputPhone = document.querySelector('.phone');
+const im = new Inputmask('+7 (999) 999 - 99 - 99');
+im.mask(inputPhone);
 
+//validation
 const form = document.getElementById('form');
 
 const formAddError = (input) => {
@@ -19,9 +23,9 @@ const emailTest = (input) => {
   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 };
 
-const numberTest = (input) => {
-  return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
-};
+// const numberTest = (input) => {
+//   return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
+// };
 
 const formValidate = (form) => {
   let error = 0;
@@ -52,7 +56,8 @@ const formValidate = (form) => {
         error++;
       }
     } else if (input.classList.contains('phone')) {
-      if (numberTest(input)) {
+      const phone = inputPhone.inputmask.unmaskedvalue();
+      if (phone.length <= 9) {
         formAddError(input);
         error++;
       }
