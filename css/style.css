@@ -128,10 +128,7 @@ input[type='number'] {
 }
 
 
-
-
-
-
+/* nf-form */
 .form {
   width: 100%;
   display: -webkit-box;
@@ -212,8 +209,6 @@ input[type='number'] {
   flex-direction: column;
   margin-bottom: 20px;
 }
-
-
 
 .form__input {
   margin-bottom: 10px;
