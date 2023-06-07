@@ -3,13 +3,9 @@ const inputPhone = document.querySelector('.phone');
 const inputPhoneMask = new Inputmask('+7 (999) 999 - 99 - 99');
 inputPhoneMask.mask(inputPhone);
 
-const inputDate = document.querySelector('.date')
-const inputDateMask = new Inputmask('99 - 99 - 9999');
+const inputDate = document.querySelector('.date');
+const inputDateMask = new Inputmask('99.99.9999');
 inputDateMask.mask(inputDate);
-
-
-
-
 
 //validation
 const form = document.getElementById('form');
@@ -60,6 +56,25 @@ const formValidate = (form) => {
       }
     } else if (input.classList.contains('city')) {
       if (nameTest(input)) {
+        formAddError(input);
+        error++;
+      }
+    } else if (input.classList.contains('date')) {
+      Date.prototype.isValid = function () {
+        return this.getTime() === this.getTime();
+      };
+
+      const dob = input.value;
+      const pattern = /(\d{2})\.(\d{2})\.(\d{4})/;
+      const dt = new Date(dob.replace(pattern, '$3-$2-$1'));
+
+      const now = new Date(); //Текущя дата
+      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); //Текущя дата без времени
+
+      let age;
+      age = today.getFullYear() - dt.getFullYear();
+
+      if (age <= 18 || dt.isValid() == false) {
         formAddError(input);
         error++;
       }
