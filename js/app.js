@@ -1,7 +1,13 @@
 //inputmask
 const inputPhone = document.querySelector('.phone');
-const im = new Inputmask('+7 (999) 999 - 99 - 99');
-im.mask(inputPhone);
+const inputPhoneMask = new Inputmask('+7 (999) 999 - 99 - 99');
+inputPhoneMask.mask(inputPhone);
+
+const inputDate = document.querySelector('.date')
+const inputDateMask = new Inputmask('99 - 99 - 9999');
+inputDateMask.mask(inputDate);
+
+
 
 
 
